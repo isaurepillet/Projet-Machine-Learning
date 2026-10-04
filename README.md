@@ -108,16 +108,12 @@ soit **n = 279 920 observations**.
 |-------|----------------|-----|------|
 | A — Recettes totales | Extra Trees | **0.970** | 0.247 |
 | B — Recettes/habitant | Gradient Boosting | **0.719** | 0.273 |
-| C — Recettes hors emprunts | Extra Trees | **0.982** | 0.191 |
-| D — Recettes fonctionnement | Extra Trees | **0.991** | 0.137 |
-| E — Recettes investissement | Extra Trees | **0.657** | 1.333 |
+| A — Recettes totales | Random Forest | **0.970** | 0.251 |
+| B — Recettes/habitant | Gradient Boosting | **0.719** | — |
 
 *Évaluation hors-échantillon sur le test 2022–2023 (n = 69 864 observations).*
 
-Les modèles linéaires plafonnent à R²≈0.74 sur la cible A contre R²=0.970
-pour Extra Trees — soit un gain de +23 points, confirmant la supériorité
-des méthodes ensemblistes pour capturer les non-linéarités de la fiscalité
-locale française.
+For target A, Random Forest reaches an out-of-sample R² of 0.970 in the saved notebook output, compared with about 0.68–0.70 for the linear specifications shown there. For target B, the modelling notebook identifies Gradient Boosting as the best-performing specification (R² ≈ 0.719).
 
 ---
 
