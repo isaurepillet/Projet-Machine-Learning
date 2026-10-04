@@ -1,0 +1,32 @@
+# Environnements Python
+.env
+.venv
+env/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Données lourdes — à télécharger séparément
+# (décommenter si les données ne doivent pas être versionnées)
+# data/raw/
+# data/processed/*.parquet
+
+# Outputs temporaires
+outputs/figures/*.png
+outputs/results/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
