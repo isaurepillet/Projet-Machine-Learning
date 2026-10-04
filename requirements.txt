@@ -1,0 +1,23 @@
+# ml-finances-locales — dépendances Python
+# Testé avec Python 3.10+
+# pip install -r requirements.txt
+
+# Core
+numpy>=1.24.0
+pandas>=2.0.0
+pyarrow>=12.0.0
+
+# Machine learning
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# Interprétabilité
+shap>=0.43.0
+
+# Visualisation
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Notebooks
+jupyter>=1.0.0
+ipykernel>=6.0.0
