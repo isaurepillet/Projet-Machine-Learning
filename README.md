@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/26447100/README.md)
 # Prédiction des recettes communales françaises par méthodes de Statistical Learning
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
@@ -20,7 +19,7 @@ d'État, fiscalité résiduelle et caractéristiques socio-démographiques. Ce p
 d'améliorer la prédiction des recettes communales par rapport aux approches
 économétriques à structure imposée.
 
-Ce travail s'inspire directement de [Chen et al. (2025)](https://example.com),
+Ce travail s'inspire directement de Chen et al. (2025),
 *Can Machine Learning Algorithms Better Help Predict Fiscal Stress in Local
 Governments?*, qui montrent sur des données américaines que les méthodes
 ensemblistes surpassent systématiquement les régressions logistiques.
@@ -33,8 +32,8 @@ ensemblistes surpassent systématiquement les régressions logistiques.
 ml-finances-locales/
 │
 ├── README.md                          ← ce fichier
-├── requirements.txt                   ← dépendances Python
-├── .gitignore
+├── requirements                       ← dépendances Python
+├── gitignore
 │
 ├── data/
 │   ├── raw/                           ← données sources originales
@@ -47,23 +46,20 @@ ml-finances-locales/
 │   └── README.md                      ← description des sources et licences
 │
 ├── notebooks/
-│   ├── 01_data_construction.ipynb     ← construction du panel et jointures
-│   ├── 02_data_cleaning.ipynb         ← nettoyage des données brutes
+│   ├── 01_construction_base.ipynb     ← construction du panel et jointures
+│   ├── 02_data_cleaning.ipynb         ← nettoyage des données
 │   ├── 03_exploratory_analysis.ipynb  ← analyse exploratoire
 │   └── 04_ml_models.ipynb             ← pipeline ML complet
 │
 ├── src/                               ← fonctions Python réutilisables
 │   ├── __init__.py
-│   ├── preprocessing.py               ← build_pipeline()
-│   ├── models.py                      ← run_models(), evaluate()
-│   └── visualization.py               ← figures académiques
+│   ├── preprocessing                  ← preprocessing utilities
+│   ├── models                         ← modelling utilities
+│   └── visualization                  ← visualisation utilities
 │
 ├── outputs/
 │   ├── figures/                       ← figures PNG pour le rapport
 │   └── results/                       ← tableaux de résultats CSV
-│
-└── report/
-    └── rapport.pdf                    ← rapport final
 ```
 
 ---
@@ -129,19 +125,19 @@ locale française.
 ## Installation
 
 ```bash
-git clone https://github.com/votre-username/ml-finances-locales.git
-cd ml-finances-locales
-pip install -r requirements.txt
+git clone https://github.com/isaurepillet/Projet-Machine-Learning.git
+cd Projet-Machine-Learning
+pip install -r requirements
 ```
 
 ### Lancer les notebooks dans l'ordre
 
 ```bash
-# 1. Nettoyage
-jupyter notebook notebooks/01_data_cleaning.ipynb
+# 1. Construction du panel
+jupyter notebook notebooks/01_construction_base.ipynb
 
-# 2. Construction du panel
-jupyter notebook notebooks/02_data_construction.ipynb
+# 2. Nettoyage
+jupyter notebook notebooks/02_data_cleaning.ipynb
 
 # 3. Analyse exploratoire
 jupyter notebook notebooks/03_exploratory_analysis.ipynb
