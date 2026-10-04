@@ -28,7 +28,7 @@ ensemblistes surpassent systématiquement les régressions logistiques.
 ## Structure du repository
 
 ```
-ml-finances-locales/
+Projet-Machine-Learning/
 │
 ├── README.md                          ← ce fichier
 ├── requirements.txt                   ← dépendances Python
@@ -106,12 +106,10 @@ soit **n = 279 920 observations**.
 
 | Cible | Meilleur modèle | R² | RMSE |
 |-------|----------------|-----|------|
-| A — Recettes totales | Extra Trees | **0.970** | 0.247 |
-| B — Recettes/habitant | Gradient Boosting | **0.719** | 0.273 |
-| A — Recettes totales | Random Forest | **0.970** | 0.251 |
-| B — Recettes/habitant | Gradient Boosting | **0.719** | — |
+| A — Recettes totales | Random Forest | **0.970** | **0.251** |
+| B — Recettes/habitant | Gradient Boosting | **≈ 0.719** | — |
 
-*Évaluation hors-échantillon sur le test 2022–2023 (n = 69 864 observations).*
+*Évaluation hors-échantillon sur 2022–2023. The saved pipeline output contains 69,864 observations for target A and 69,852 for target B.*
 
 For target A, Random Forest reaches an out-of-sample R² of 0.970 in the saved notebook output, compared with about 0.68–0.70 for the linear specifications shown there. For target B, the modelling notebook identifies Gradient Boosting as the best-performing specification (R² ≈ 0.719).
 
