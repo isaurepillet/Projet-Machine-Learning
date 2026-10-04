@@ -1,7 +1,6 @@
 # Prédiction des recettes communales françaises par méthodes de Statistical Learning
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## Contexte et motivation
 
@@ -32,8 +31,8 @@ ensemblistes surpassent systématiquement les régressions logistiques.
 ml-finances-locales/
 │
 ├── README.md                          ← ce fichier
-├── requirements                       ← dépendances Python
-├── gitignore
+├── requirements.txt                   ← dépendances Python
+├── .gitignore
 │
 ├── data/
 │   ├── raw/                           ← données sources originales
@@ -53,9 +52,9 @@ ml-finances-locales/
 │
 ├── src/                               ← fonctions Python réutilisables
 │   ├── __init__.py
-│   ├── preprocessing                  ← preprocessing utilities
-│   ├── models                         ← modelling utilities
-│   └── visualization                  ← visualisation utilities
+│   ├── preprocessing.py               ← preprocessing utilities
+│   ├── models.py                      ← modelling utilities
+│   └── visualization.py               ← visualisation utilities
 │
 ├── outputs/
 │   ├── figures/                       ← figures PNG pour le rapport
@@ -127,7 +126,7 @@ locale française.
 ```bash
 git clone https://github.com/isaurepillet/Projet-Machine-Learning.git
 cd Projet-Machine-Learning
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ### Lancer les notebooks dans l'ordre
@@ -173,9 +172,3 @@ Le preprocessing est estimé exclusivement sur l'ensemble d'entraînement
 - Cour des comptes (2024). *L'intelligence artificielle dans les politiques
   publiques*.
 
----
-
-## Licence
-
-Les données sources sont issues de plateformes open data gouvernementales
-françaises (licence Etalab 2.0). Le code est distribué sous licence MIT.
